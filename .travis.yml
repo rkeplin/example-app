@@ -1,0 +1,12 @@
+sudo: required
+
+language: php
+
+script:
+- echo "No tests, just a deployment..."
+
+deploy:
+  provider: script
+  script: bash $(pwd)/.deploy/deploy.sh
+  on:
+    branch: master
